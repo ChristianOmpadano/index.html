@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Digital Cookbook</title>
+    <style>
+        /* General body styling */
+        body {
+            background-color: #D3D1CE;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        hr {
+            margin: 20px 0;
+        }
+
+        /* Recipe box styling */
+        details {
+            width: 60%;
+            margin: 10px auto;
+            text-align: left;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        summary {
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        summary:hover {
+            color: #d2691e;
+        }
+
+        img {
+            width: 100%;
+            max-width: 500px;
+            display: block;
+            margin: 10px auto;
+            border-radius: 8px;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+        }
+
+        footer {
+            margin: 20px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>PAPA KHEM'S COOKBOOK</h1>
+    <p>Made with LOVE</p>
+    <hr>
+
+    <h2>Recipe Menu</h2>
+
+    <!-- HONEY GARLIC SHRIMP -->
+    <details>
+        <summary>Honey Garlic Shrimp</summary>
+        <picture>
+            <source media="(min-width: 0px)" srcset="HoneyGarlic.jpg">
+            <img src="HoneyGarlic.jpg" alt="Honey Garlic Shrimp">
+        </picture>
+        <p><strong>Prep time:</strong> 30 mins | <strong>Cook time:</strong> 50 mins | <strong>Servings:</strong> 2</p>
+
+        <h4>Ingredients</h4>
+        <ul>
+            <li>500g shrimp</li>
+            <li>3 tbsp honey</li>
+            <li>2 tbsp soy sauce</li>
+            <li>Minced garlic</li>
+            <li>Grated ginger</li>
+        </ul>
+
+        <h4>Instructions</h4>
+        <ol>
+            <li>Mix honey, soy sauce, garlic, and ginger.</li>
+            <li>Marinate shrimp for 15–30 minutes.</li>
+            <li>Sear shrimp 2 minutes per side.</li>
+            <li>Pour remaining sauce and cook until thickened. Serve.</li>
+        </ol>
+    </details>
+
+    <!-- BAKED TAHONG -->
+    <details>
+        <summary>Baked Tahong</summary>
+        <picture>
+            <source media="(min-width: 0px)" srcset="baketahong.jpg">
+            <img src="baketahong.jpg" alt="Baked Tahong">
+        </picture>
+        <p><strong>Prep time:</strong> 20 mins | <strong>Cook time:</strong> 40 mins | <strong>Servings:</strong> 2</p>
+
+        <h4>Ingredients</h4>
+        <ul>
+            <li>1 kilo tahong</li>
+            <li>3–5 cloves garlic</li>
+            <li>1 cup quick melt cheese</li>
+            <li>1 tbsp mayonnaise</li>
+        </ul>
+
+        <h4>Instructions</h4>
+        <ol>
+            <li>Preheat oven to 180°C.</li>
+            <li>Clean and steam mussels until open.</li>
+            <li>Top with garlic butter and cheese.</li>
+            <li>Bake 8–10 minutes.</li>
+        </ol>
+    </details>
+
+    <!-- CAESAR SALAD -->
+    <details>
+        <summary>Caesar Salad</summary>
+        <picture>
+            <source media="(min-width: 0px)" srcset="Ceasar.jpg">
+            <img src="Ceasar.jpg" alt="Caesar Salad">
+        </picture>
+        <p><strong>Prep time:</strong> 10 mins | <strong>Cook time:</strong> 30 mins | <strong>Servings:</strong> 1</p>
+
+        <h4>Ingredients</h4>
+        <ul>
+            <li>1/2 cup mayonnaise or olive oil</li>
+            <li>1–2 egg yolks</li>
+            <li>1 tbsp lemon juice</li>
+            <li>1 tsp Worcestershire sauce</li>
+            <li>2 heads romaine lettuce</li>
+        </ul>
+
+        <h4>Instructions</h4>
+        <ol>
+            <li>Prepare dressing.</li>
+            <li>Toss lettuce with dressing.</li>
+            <li>Add cheese and serve.</li>
+        </ol>
+    </details>
+
+    <hr>
+    <footer>NOAH's RECIPE</footer>
+
+    <script>
+        // Allow only one <details> open at a time
+        const allDetails = document.querySelectorAll("details");
+
+        allDetails.forEach((detail) => {
+            detail.addEventListener("click", function() {
+                allDetails.forEach((otherDetail) => {
+                    if (otherDetail !== detail) {
+                        otherDetail.removeAttribute("open");
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
